@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'sg-app',
   template: require('./app.component.html'),
   styles: [
-    require('./app.component.css')
+    require('./app.component.scss')
   ]
 })
 class AppComponent {

@@ -4,6 +4,7 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const sourceDir = path.join(__dirname, 'src');
 const mainPath = path.join(__dirname, 'src/main.ts')
@@ -76,8 +77,8 @@ function getModuleLoaders() {
 
   loaders.push(
     {
-      test: /\.css$/,
-      loader: 'raw-loader'
+      test: /\.scss$/,
+      loaders: ['to-string', 'css', 'postcss', 'sass']
     },
     {
       test: /\.html$/,
@@ -236,6 +237,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.ts', '.js']
   },
+
+  postcss: () => [autoprefixer],
 
   plugins: getPlugins(),
   devServer: getDevServer(),
