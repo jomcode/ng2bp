@@ -76,6 +76,10 @@ function getModuleLoaders() {
 
   loaders.push(
     {
+      test: /\.css$/,
+      loader: 'raw-loader'
+    },
+    {
       test: /\.html$/,
       loader: 'raw-loader',
       exclude: [path.join(__dirname, 'src/index.html')]
