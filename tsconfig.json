@@ -18,6 +18,7 @@
     ],
     "files": [
         "src/app/app.component.ts",
+        "src/app/app.spec.ts",
         "src/main.ts",
         "src/polyfills.ts",
         "src/vendor.ts",

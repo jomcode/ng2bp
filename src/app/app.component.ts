@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   ]
 })
 class AppComponent {
-  pageTitle: string = 'App Component';
+  pageHeading: string = 'AppComponent';
 }
 
 export { AppComponent };
