@@ -21,9 +21,7 @@
     "webdriver:start": "webdriver-manager start",
 
     "pree2e": "npm run webdriver:update -- --standalone",
-    "e2e": "better-npm-run e2e",
-
-    "postinstall": "npm run typings -- install"
+    "e2e": "better-npm-run e2e"
   },
   "betterScripts": {
     "dev": {

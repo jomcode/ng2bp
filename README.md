@@ -13,7 +13,7 @@ An Angular2 project boilerplate I decided to make for learning purposes.
 - typescript
 
 ## TODO
-- end to end testing with protractor
+- move helpers into subfolder with functions in seperate files
 
 ***
 

@@ -129,7 +129,7 @@ function getPlugins() {
     }),
 
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'src/index.html'),
+      template: path.join(sourceDir, 'index.html'),
       chunksSortMode: packageSort(['polyfills', 'vendor', 'main'])
     })
   );
