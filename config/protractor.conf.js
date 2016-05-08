@@ -1,10 +1,13 @@
 const path = require('path');
+
+const helpers = require('./helpers');
+
 require('ts-node/register');
 
 module.exports.config = {
   specs: [
-    path.join(__dirname, '..', 'src/**/**.e2e.ts'),
-    path.join(__dirname, '..', 'src/**/*.e2e.ts')
+    path.join(helpers.sourceDir, '/**/**.e2e.ts'),
+    path.join(helpers.sourceDir, 'src/**/*.e2e.ts')
   ],
   exclude: [],
   baseUrl: 'http://localhost:8080',

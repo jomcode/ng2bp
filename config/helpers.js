@@ -95,7 +95,7 @@ function getModuleLoaders() {
     {
       test: /\.html$/,
       loader: 'raw-loader',
-      exclude: [path.join(__dirname, '..', 'src/index.html')]
+      exclude: [path.join(sourceDir, 'index.html')]
     }
   );
 
@@ -186,7 +186,7 @@ function packageSort(packages) {
 function getDevServer() {
   if (isDevelopment && isHot) {
     return {
-      contentBase: path.join(__dirname, '..', 'dist'),
+      contentBase: path.join(outputDir),
       historyApiFallback: true,
       hot: true,
       inline: true,
@@ -201,7 +201,7 @@ function getDevServer() {
   }
   if (isDevelopment && !isHot) {
     return {
-      contentBase: path.join(__dirname, '..', 'dist'),
+      contentBase: path.join(outputDir),
       historyApiFallback: true,
       // hot: true,
       inline: true,
