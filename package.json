@@ -9,9 +9,17 @@
     "lint": "tslint src/**/*.ts",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
+
     "pretest": "npm run lint",
     "test": "better-npm-run test",
     "test:watch": "better-npm-run test:watch",
+
+    "webdriver:update": "webdriver-manager update",
+    "webdriver:start": "webdriver-manager start",
+
+    "pree2e": "npm run webdriver:update -- --standalone",
+    "e2e": "better-npm-run e2e",
+
     "postinstall": "npm run typings -- install"
   },
   "betterScripts": {
@@ -36,6 +44,12 @@
     },
     "test:watch": {
       "command": "karma start --auto-watch --no-single-run",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "e2e": {
+      "command": "protractor",
       "env": {
         "NODE_ENV": "test"
       }
@@ -70,6 +84,7 @@
     "parse5": "^2.1.5",
     "phantomjs-prebuilt": "^2.1.7",
     "postcss-loader": "^0.9.1",
+    "protractor": "^3.3.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.2.0",
     "source-map-loader": "^0.1.5",

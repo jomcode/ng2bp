@@ -18,7 +18,9 @@
     ],
     "files": [
         "src/app/app.component.ts",
+        "src/app/app.e2e.ts",
         "src/app/app.spec.ts",
+        "src/customtypings.d.ts",
         "src/main.ts",
         "src/polyfills.ts",
         "src/vendor.ts",
