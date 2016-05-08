@@ -7,6 +7,7 @@ module.exports.config = {
     path.join(__dirname, '..', 'src/**/*.e2e.ts')
   ],
   exclude: [],
+  baseUrl: 'http://localhost:8080',
   framework: 'jasmine2',
   allScriptsTimeout: 110000,
 

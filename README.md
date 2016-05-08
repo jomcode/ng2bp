@@ -15,13 +15,23 @@ An Angular2 project boilerplate I decided to make for learning purposes.
 ## TODO
 - end to end testing with protractor
 
+***
+
 ## How to Use
 `npm run dev`
 `npm run build`
 `npm run test`
 `npm run test:watch`
 
-### Angular 2 Polyfills
+### Running End to End Tests
+1 `npm run build`
+2 `cd dist`
+3 `http-server -p 8080`
+4 `npm run e2e`
+
+***
+
+## Angular 2 Polyfills
 - core-js/es6
 - core-js/es7
 - zone.js/dist/zone

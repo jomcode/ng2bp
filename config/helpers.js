@@ -184,11 +184,26 @@ function packageSort(packages) {
 }
 
 function getDevServer() {
-  if (isDevelopment) {
+  if (isDevelopment && isHot) {
     return {
       contentBase: path.join(__dirname, '..', 'dist'),
       historyApiFallback: true,
       hot: true,
+      inline: true,
+      progress: true,
+      stats: {
+        colors: true,
+        chunks: false
+      },
+      host: 'localhost',
+      port: port
+    };
+  }
+  if (isDevelopment && !isHot) {
+    return {
+      contentBase: path.join(__dirname, '..', 'dist'),
+      historyApiFallback: true,
+      // hot: true,
       inline: true,
       progress: true,
       stats: {
@@ -239,6 +254,10 @@ function getNode() {
     setImmediate: false
   };
 }
+
+module.exports.sourceDir = sourceDir;
+module.exports.outputDir = outputDir;
+module.exports.port = port;
 
 module.exports.getMetadata = getMetadata;
 module.exports.getDevTool = getDevTool;

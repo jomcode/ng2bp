@@ -7,7 +7,7 @@ function main(initialHmrState?: any): Promise<any> {
   .catch((err: any) => console.error(err));
 }
 
-if (process.env.HMR === 'enabled') {
+if (process.env.NODE_ENV === 'development' && process.env.HMR === 'enabled') {
   let ngHmr: any = require('angular2-hmr');
   ngHmr.hotModuleReplacement(main, module);
 }

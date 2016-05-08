@@ -7,7 +7,10 @@
     "tslint": "tslint",
     "typings": "typings",
     "lint": "tslint src/**/*.ts",
+
     "dev": "better-npm-run dev",
+    "dev:hot": "better-npm-run dev:hot",
+
     "build": "better-npm-run build",
 
     "pretest": "npm run lint",
@@ -24,6 +27,13 @@
   },
   "betterScripts": {
     "dev": {
+      "command": "webpack-dev-server",
+      "env": {
+        "NODE_ENV": "development",
+        "HMR": "disabled"
+      }
+    },
+    "dev:hot": {
       "command": "webpack-dev-server",
       "env": {
         "NODE_ENV": "development",
