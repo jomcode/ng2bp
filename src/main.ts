@@ -4,11 +4,11 @@ import { AppComponent } from './app/app.component';
 
 function main(initialHmrState?: any): Promise<any> {
   return bootstrap(AppComponent)
-  .catch(err => console.error(err));
+  .catch((err: any) => console.error(err));
 }
 
 if (process.env.HMR === 'enabled') {
-  let ngHmr = require('angular2-hmr');
+  let ngHmr: any = require('angular2-hmr');
   ngHmr.hotModuleReplacement(main, module);
 }
 else {

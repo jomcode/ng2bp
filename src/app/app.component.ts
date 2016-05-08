@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'sg-app',
-  template: require('./app.component.html'),
   styles: [
     require('./app.component.scss')
-  ]
+  ],
+  template: require('./app.component.html'),
 })
 class AppComponent {
-  pageHeading: string = 'AppComponent';
+  public pageHeading: string = 'AppComponent';
 }
 
 export { AppComponent };

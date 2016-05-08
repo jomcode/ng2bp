@@ -18,6 +18,8 @@ An Angular2 project boilerplate I decided to make for learning purposes.
 ## How to Use
 `npm run dev`
 `npm run build`
+`npm run test`
+`npm run test:watch`
 
 ### Angular 2 Polyfills
 - core-js/es6
